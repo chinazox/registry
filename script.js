@@ -54,22 +54,6 @@ const FUNDS = [
     "gocardless": ""
   },
   {
-    "name": "Photography & Videography",
-    "goal": 4000,
-    "contributed": 0,
-    "icon": "📷",
-    "paypal": "",
-    "gocardless": ""
-  },
-  {
-    "name": "Wedding Catering",
-    "goal": 10000,
-    "contributed": 0,
-    "icon": "🍽️",
-    "paypal": "",
-    "gocardless": ""
-  },
-  {
     "name": "My Bridal Robe",
     "goal": 250,
     "contributed": 0,
@@ -82,6 +66,14 @@ const FUNDS = [
     "goal": 500,
     "contributed": 0,
     "icon": "💄",
+    "paypal": "",
+    "gocardless": ""
+  },
+  {
+    "name": "House Downpayment",
+    "goal": 10000,
+    "contributed": 0,
+    "icon": "🔑",
     "paypal": "",
     "gocardless": ""
   }
