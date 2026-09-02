@@ -12,23 +12,26 @@
 </head>
 <body>
   <header class="hero">
-    <div class="eyebrow">CHINAZO & CHIEBUKA</div>
-    <h1>Cash Gift Registry</h1>
+    <h1>Our Gift Registry</h1>
     <p class="intro">
       We’re moving to Nigeria immediately after the wedding, so we'll be forgoing physical gifts in place of a cash registry towards a few of the things that we'll need to start our new life together!
 <br>
 <br>
 Please feel free to contribute whatever feels right for you. We are  incredibly grateful for your generosity and support as we begin this exciting next chapter.
-<br>
-<br>
-- Love Chinazo & Chiebuka
-    </p>
+<main>
+  <br>
+  <div class="registry-photo">
+  <img src="images/us.jpg" alt="Us">
+  <br>
+  <span>– Love Chinazo & Chiebuka</span>
+</div>
 
-  </header>
+  <section class="registry-grid" id="registry"></section>
 
-  <main>
-    <section class="registry-grid" id="registry"></section>
   </main>
+
+</header>
+
 
   <footer>
     <div>CHINAZO & CHIEBUKA</div>
@@ -57,21 +60,16 @@ Please feel free to contribute whatever feels right for you. We are  incredibly 
         <button data-amount="500">£500</button>
         <button data-amount="1000">£1000</button>
       </div>
-      <span>Feel free to input a cutsom amount</span>
+      <span style="font-size: 14px;">Feel free to input a custom amount</span>
+<br>
+<br>
 
       <div class="payment-options">
         <button class="payment bank" id="bankBtn">
-          <span>Pay by bank transfer</span><small>View our bank details</small>
+          <span>Pay by bank transfer</span><small>Click to view bank details</small>
         </button>
-        <button class="payment gc" id="gcBtn">
-          <span>Pay by card</span><small>Enabled by Gocardless</small>
-        </button>
-        <button class="payment paypal" id="paypalBtn">
-          <span>Pay with PayPal</span><small>Secure payment through PayPal</small>
-        </button>
-      </div>
 
-      <div class="bank-details" id="bankDetails">
+        <div class="bank-details" id="bankDetails">
         <h3>Bank Transfer Details</h3>
         <dl>
           <div><dt>Account name</dt><dd data-bank="name">CHINAZO ONWUTA</dd></div>
@@ -82,6 +80,16 @@ Please feel free to contribute whatever feels right for you. We are  incredibly 
         </dl>
         <button class="copy-btn" id="copyBank">Copy bank details</button>
       </div>
+
+        <button class="payment gc" id="gcBtn">
+          <span>Pay by card</span><small>Enabled by Gocardless</small>
+        </button>
+        <button class="payment paypal" id="paypalBtn">
+          <span>Pay with PayPal</span><small>Secure payment through PayPal</small>
+        </button>
+      </div>
+
+      
 
       <p class="small-note">
         Your contribution will be sent directly to us.
