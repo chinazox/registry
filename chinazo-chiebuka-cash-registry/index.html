@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f0e9">
+  <title>Chinazo & Chiebuka | Gift Registry</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="eyebrow">CHINAZO & CHIEBUKA</div>
+    <h1>Our Gift Registry</h1>
+    <p class="intro">
+      We're moving to Nigeria immediately after the wedding, so we're choosing a cash registry
+      towards the things we'll need as we start our new life together.
+    </p>
+    <p class="subintro">Choose a fund below and contribute whatever feels right for you.</p>
+  </header>
+
+  <main>
+    <section class="registry-grid" id="registry"></section>
+  </main>
+
+  <footer>
+    <div>CHINAZO & CHIEBUKA</div>
+    <p>Thank you for helping us begin this next chapter.</p>
+  </footer>
+
+  <div class="modal-backdrop" id="modalBackdrop" aria-hidden="true">
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="close" id="closeModal" aria-label="Close">×</button>
+      <div class="modal-icon" id="modalIcon"></div>
+      <div class="modal-kicker">GIFT FUND</div>
+      <h2 id="modalTitle"></h2>
+      <p class="modal-description" id="modalDescription"></p>
+
+      <div class="goal-row">
+        <span>Goal</span><strong id="modalGoal"></strong>
+      </div>
+
+      <label for="amount">How much would you like to contribute?</label>
+      <div class="amount-wrap">
+        <span>£</span>
+        <input id="amount" inputmode="decimal" type="number" min="1" step="1" placeholder="100">
+      </div>
+
+      <div class="quick-amounts">
+        <button data-amount="25">£25</button>
+        <button data-amount="50">£50</button>
+        <button data-amount="100">£100</button>
+        <button data-amount="250">£250</button>
+      </div>
+
+      <div class="payment-options">
+        <button class="payment paypal" id="paypalBtn">
+          <span>Pay with PayPal</span><small>Secure payment through PayPal</small>
+        </button>
+        <button class="payment bank" id="bankBtn">
+          <span>Pay by bank transfer</span><small>View our bank details</small>
+        </button>
+        <button class="payment gc" id="gcBtn">
+          <span>Pay by bank</span><small>GoCardless — available if enabled</small>
+        </button>
+      </div>
+
+      <div class="bank-details" id="bankDetails">
+        <h3>Bank Transfer Details</h3>
+        <p>Replace the details below in <strong>script.js</strong> before sharing the site.</p>
+        <dl>
+          <div><dt>Account name</dt><dd data-bank="name">YOUR NAME</dd></div>
+          <div><dt>Sort code</dt><dd data-bank="sort">XX-XX-XX</dd></div>
+          <div><dt>Account number</dt><dd data-bank="account">XXXXXXXX</dd></div>
+          <div><dt>Reference</dt><dd id="bankReference">GIFT</dd></div>
+          <div><dt>Amount</dt><dd id="bankAmount">£100</dd></div>
+        </dl>
+        <button class="copy-btn" id="copyBank">Copy bank details</button>
+      </div>
+
+      <p class="small-note">
+        Your contribution is sent directly to us. The registry itself does not process or hold your money.
+      </p>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
