@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+<script src="https://www.paypal.com/sdk/js?client-id=BAApCG5aUosLPvrOluP8S60WclKMbt3nXRqc5WOx3HyrOm88it3y6K4o2Co__RzFSHx15pcgM3TUfOJBws&components=hosted-buttons&disable-funding=venmo&currency=GBP"></script>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -98,13 +99,22 @@ Please feel free to contribute whatever feels right for you. We are  incredibly 
   </a>
 </div>
 
-        <button class="payment card" id="cardBtn">
-          <span>Pay by card</span><small>Card processing fees may apply*</small>
-        </button>
+
+<button class="payment" id="cardBtn">
+  <span>Pay by card</span><small>Card processing fees may apply*</small>
+</div>
+
+<div class="bank-details" id="cardPayment">
+  <h3>Pay by card</h3>
+
+  <div class="payment-amount">
+    <strong id="cardAmount">£100</strong>
+  </div>
+
+  <div id="paypal-container-J99ZJFK67ZYRQ"></div>
+</div>
         
       </div>
-
-      
 
       <p class="small-note">
         Your contribution will be sent directly to us.

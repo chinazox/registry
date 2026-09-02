@@ -199,6 +199,15 @@ dt { color:var(--muted); } dd { margin:0; font-weight:600; text-align:right; }
   background: var(--ink);
   color: white;
 }
+
+#cardPayment {
+  display: none;
+}
+
+#cardPayment.open {
+  display: block;
+}
+
 .registry-photo img {
   width: 100%;
   display: block;
@@ -219,7 +228,45 @@ dt { color:var(--muted); } dd { margin:0; font-weight:600; text-align:right; }
   .card-image { aspect-ratio:1.35/1; }
   .modal { padding:28px 22px; }
   .modal h2 { font-size:34px; }
+
+.thank-you-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 24px;
+  text-align: center;
 }
-#cardBtn {
-  display: none;
+
+.thank-you-page h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 52px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.thank-you-page img {
+  display: block;
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto 35px;
+}
+
+.thank-you-page p {
+  max-width: 600px;
+  margin: 0 auto 30px;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.thank-you-button {
+  display: inline-block;
+  padding: 13px 28px;
+  background: var(--ink);
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+.thank-you-page img {
+  width: 350px;
+  max-width: 90%;
+  height: auto;
 }

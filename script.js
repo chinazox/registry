@@ -162,8 +162,13 @@ function getAmount() {
 function updateBankAmount() {
   const amount = Number(amountInput.value) || 0;
   document.getElementById("bankAmount").textContent = money(amount);
+  document.getElementById("paymentAmount").textContent = money(amount);
+  document.getElementById("cardAmount").textContent = money(amount);
 }
 amountInput.addEventListener("input", updateBankAmount);
+amountInput.addEventListener("input", () => {
+  document.getElementById("paymentAmount").textContent = money(Number(amountInput.value) || 0);
+});
 
 bankBtn.addEventListener("click", () => {
   const amount = getAmount();
@@ -175,8 +180,24 @@ bankBtn.addEventListener("click", () => {
 paylinkBtn.addEventListener("click", () => {
   const amount = getAmount();
   if (amount === null) return;
+
+  document.getElementById("paymentAmount").textContent = "£" + amount;
   paymentLink.classList.toggle("open");
 });
+
+const cardBtn = document.getElementById("cardBtn");
+const cardPayment = document.getElementById("cardPayment");
+
+cardBtn.addEventListener("click", () => {
+  const amount = getAmount();
+  if (amount === null) return;
+
+  document.getElementById("cardAmount").textContent = money(amount);
+  cardPayment.classList.toggle("open");
+});
+paypal.HostedButtons({
+  hostedButtonId: "J99ZJFK67ZYRQ",
+}).render("#paypal-container-J99ZJFK67ZYRQ");
 
 document.getElementById("copyBank").addEventListener("click", async () => {
   const amount = Number(amountInput.value) || 0;
