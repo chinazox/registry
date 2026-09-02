@@ -1,15 +1,15 @@
 const BANK_DETAILS = {
-  name: "YOUR NAME",
-  sort: "XX-XX-XX",
-  account: "XXXXXXXX"
+  name: "CHINAZO ONWUTA",
+  sort: "01-09-27",
+  account: "84465564"
 };
-
+const PAYPAL_LINK = "https://paypal.me/chinazox";
 const FUNDS = [
   {
     "name": "Our Honeymoon Fund",
     "goal": 6000,
     "contributed": 0,
-    "icon": "✈️",
+    "image": "images/honeymoon.jpeg",
     "paypal": "",
     "gocardless": ""
   },
@@ -17,7 +17,7 @@ const FUNDS = [
     "name": "Furniture For Our New Home",
     "goal": 8000,
     "contributed": 0,
-    "icon": "🏡",
+    "image": "images/furniture.jpg",
     "paypal": "",
     "gocardless": ""
   },
@@ -25,7 +25,7 @@ const FUNDS = [
     "name": "Wedding Night Suite",
     "goal": 350,
     "contributed": 0,
-    "icon": "🥂",
+    "image": "images/suite.JPG",
     "paypal": "",
     "gocardless": ""
   },
@@ -33,7 +33,7 @@ const FUNDS = [
     "name": "Wedding Cake",
     "goal": 500,
     "contributed": 0,
-    "icon": "🎂",
+    "image": "images/cake.jpeg",
     "paypal": "",
     "gocardless": ""
   },
@@ -41,7 +41,7 @@ const FUNDS = [
     "name": "Our First Date Night",
     "goal": 100,
     "contributed": 0,
-    "icon": "🕯️",
+     "image": "images/datenight.jpeg",
     "paypal": "",
     "gocardless": ""
   },
@@ -49,7 +49,7 @@ const FUNDS = [
     "name": "Uber to the Airport",
     "goal": 50,
     "contributed": 0,
-    "icon": "🚕",
+    "image": "images/uber.jpeg",
     "paypal": "",
     "gocardless": ""
   },
@@ -57,7 +57,7 @@ const FUNDS = [
     "name": "My Bridal Robe",
     "goal": 250,
     "contributed": 0,
-    "icon": "🤍",
+    "image": "images/robe.jpg",
     "paypal": "",
     "gocardless": ""
   },
@@ -65,7 +65,7 @@ const FUNDS = [
     "name": "Wedding Day Makeup",
     "goal": 500,
     "contributed": 0,
-    "icon": "💄",
+    "image": "images/makeup.JPG",
     "paypal": "",
     "gocardless": ""
   },
@@ -73,7 +73,7 @@ const FUNDS = [
     "name": "House Downpayment",
     "goal": 10000,
     "contributed": 0,
-    "icon": "🔑",
+    "image": "images/home.jpeg",
     "paypal": "",
     "gocardless": ""
   }
@@ -99,9 +99,11 @@ const money = n => new Intl.NumberFormat("en-GB", {
 function render() {
   registry.innerHTML = FUNDS.map((f, i) => `
     <article class="card" data-index="${i}">
-      <div class="card-image"><span>${f.icon}</span></div>
+      <div class="card-image">
+  <img src="${f.image}" alt="${f.name}">
+</div>
       <div class="card-body">
-        <div class="card-kicker">Cash Gift</div>
+        <div class="card-kicker">Cash Contribution</div>
         <h3>${f.name}</h3>
         <div class="goal"><span>Total goal</span><strong>${money(f.goal)}</strong></div>
         <div class="contribute-link"><span>Contribute</span><span>→</span></div>
@@ -171,11 +173,8 @@ bankBtn.addEventListener("click", () => {
 paypalBtn.addEventListener("click", () => {
   const amount = getAmount();
   if (amount === null) return;
-  if (!activeFund.paypal) {
-    alert("Your PayPal link hasn't been added yet. Add it in script.js.");
-    return;
-  }
-  window.open(activeFund.paypal, "_blank", "noopener,noreferrer");
+
+  window.open(PAYPAL_LINK, "_blank", "noopener,noreferrer");
 });
 
 gcBtn.addEventListener("click", () => {
