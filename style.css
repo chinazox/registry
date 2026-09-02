@@ -89,15 +89,18 @@ main { max-width: 1180px; margin: 0 auto; padding: 0 24px 90px; }
   font-weight: 600;
   line-height: 1;
 }
+.card:nth-child(2) h3 {
+  font-size: 26px;
+}
 .goal {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   gap: 10px;
   color: var(--muted);
-  font-size: 11px;
+  font-size: 15px;
 }
-.goal strong { color: var(--ink); font-size: 15px; font-weight: 600; }
+.goal strong { color: var(--ink); font-size: 17px; font-weight: 600; }
 .contribute-link {
   margin-top: 18px;
   padding-top: 13px;
@@ -106,7 +109,7 @@ main { max-width: 1180px; margin: 0 auto; padding: 0 24px 90px; }
   justify-content: space-between;
   align-items: center;
   color: var(--ink);
-  font-size: 11px;
+  font-size: 15px;
   font-weight: 600;
 }
 .contribute-link span:last-child { font-size: 17px; }
@@ -144,9 +147,16 @@ label { font-size:12px; font-weight:600; display:block; margin-bottom:8px; }
 .quick-amounts button { border:1px solid var(--line); background:white; padding:9px; cursor:pointer; }
 .payment-options { display:grid; gap:9px; }
 .payment { border:0; text-align:left; padding:16px 18px; cursor:pointer; background:#e9e3da; color:var(--ink); }
-.payment.active {
-  background:#24221f;
-  color:white;
+.payment.bank:has(+ .bank-details.open) {
+  background: #24221f;
+  color: white;
+}
+.quick-amounts button.selected {
+  background: #24221f;
+  color: white;
+}
+#amount::placeholder {
+  color: #c9c8c8;
 }
 .payment span, .payment small { display:block; }
 .payment span { font-weight:600; }

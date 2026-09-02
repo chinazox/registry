@@ -54,7 +54,7 @@ const FUNDS = [
     "gocardless": ""
   },
   {
-    "name": "My Bridal Robe",
+    "name": "Bridal Robe",
     "goal": 250,
     "contributed": 0,
     "image": "images/robe.jpg",
@@ -70,7 +70,7 @@ const FUNDS = [
     "gocardless": ""
   },
   {
-    "name": "House Downpayment",
+    "name": "House Down Payment",
     "goal": 10000,
     "contributed": 0,
     "image": "images/home.jpeg",
@@ -143,6 +143,8 @@ document.addEventListener("keydown", e => { if (e.key === "Escape") close(); });
 document.querySelectorAll(".quick-amounts button").forEach(btn =>
   btn.addEventListener("click", () => {
     amountInput.value = btn.dataset.amount;
+    document.querySelectorAll(".quick-amounts button").forEach(b => b.classList.remove("selected"));
+    btn.classList.add("selected");
     updateBankAmount();
   })
 );
