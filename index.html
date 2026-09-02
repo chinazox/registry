@@ -80,10 +80,25 @@ Please feel free to contribute whatever feels right for you. We are  incredibly 
         <button class="copy-btn" id="copyBank">Copy bank details</button>
       </div>
 
-      <button class="payment paypal" id="paypalBtn">
-          <span>Pay with PayPal</span><small>Secure payment via PayPal link</small>
+      <button class= "payment link" id="paylinkBtn">
+        <span>Pay with payment link</span><small>Secure payment via payment links</small>
         </button>
-        <button class="payment gc" id="gcBtn">
+        
+       <div class="bank-details" id="paymentLink">
+        <h3 style="font-size: 24px;">Payment Links</h3>
+        <div class="payment-amount">
+  <small>Send your chosen amount of <strong id="paymentAmount">£100</strong> via secure payment links</small>
+</div>
+        <a class="payment-link-btn" href="https://paypal.me/chinazox" target="_blank" rel="noopener">
+    <small>Pay via Paypal</small>
+  </a>
+
+  <a class="payment-link-btn" href="https://pay.lloydsbank.co.uk/pay/?a=C0nwu-8QG9SV" target="_blank" rel="noopener">
+    <small>Pay via Lloyds Bank</small>
+  </a>
+</div>
+
+        <button class="payment card" id="cardBtn">
           <span>Pay by card</span><small>Card processing fees may apply*</small>
         </button>
         

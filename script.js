@@ -88,7 +88,8 @@ const modalGoal = document.getElementById("modalGoal");
 const modalIcon = document.getElementById("modalIcon");
 const bankDetails = document.getElementById("bankDetails");
 const bankBtn = document.getElementById("bankBtn");
-const paypalBtn = document.getElementById("paypalBtn");
+const paylinkBtn = document.getElementById("paylinkBtn");
+const paymentLink = document.getElementById("paymentLink");
 let activeFund = null;
 
 const money = n => new Intl.NumberFormat("en-GB", {
@@ -171,13 +172,11 @@ bankBtn.addEventListener("click", () => {
   bankDetails.classList.toggle("open");
 });
 
-paypalBtn.addEventListener("click", () => {
+paylinkBtn.addEventListener("click", () => {
   const amount = getAmount();
   if (amount === null) return;
-
-  window.open(PAYPAL_LINK, "_blank", "noopener,noreferrer");
+  paymentLink.classList.toggle("open");
 });
-
 
 document.getElementById("copyBank").addEventListener("click", async () => {
   const amount = Number(amountInput.value) || 0;

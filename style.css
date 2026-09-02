@@ -151,6 +151,10 @@ label { font-size:12px; font-weight:600; display:block; margin-bottom:8px; }
   background: #24221f;
   color: white;
 }
+.payment.link:has(+ .bank-details.open) {
+  background: #24221f;
+  color: white;
+}
 .quick-amounts button.selected {
   background: #24221f;
   color: white;
@@ -162,7 +166,7 @@ label { font-size:12px; font-weight:600; display:block; margin-bottom:8px; }
 .payment span { font-weight:600; }
 .payment small { margin-top:4px; opacity:.7; font-size:11px; }
 .payment.bank { background:#e9e3da; color:var(--ink); }
-.payment.gc { background:#d8d1c6; color:var(--ink); }
+.payment.card { background:#d8d1c6; color:var(--ink); }
 .bank-details { display:none; margin-top:14px; padding:18px; background:#f0ebe4; }
 .bank-details.open { display:block; }
 .bank-details h3 { margin:0 0 10px; font-size:26px; }
@@ -176,7 +180,25 @@ dt { color:var(--muted); } dd { margin:0; font-weight:600; text-align:right; }
   max-width: 240px;
   margin: 0 auto 60px;
 }
+.payment-link-btn {
+  display: block;
+  width: 100%;
+  padding: 13px 16px;
+  margin-top: 10px;
+  border: 1px solid var(--ink);
+  background: transparent;
+  color: var(--ink);
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
 
+.payment-link-btn:hover {
+  background: var(--ink);
+  color: white;
+}
 .registry-photo img {
   width: 100%;
   display: block;
@@ -198,6 +220,6 @@ dt { color:var(--muted); } dd { margin:0; font-weight:600; text-align:right; }
   .modal { padding:28px 22px; }
   .modal h2 { font-size:34px; }
 }
-#gcBtn {
+#cardBtn {
   display: none;
 }
