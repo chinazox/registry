@@ -89,7 +89,6 @@ const modalIcon = document.getElementById("modalIcon");
 const bankDetails = document.getElementById("bankDetails");
 const bankBtn = document.getElementById("bankBtn");
 const paypalBtn = document.getElementById("paypalBtn");
-const gcBtn = document.getElementById("gcBtn");
 let activeFund = null;
 
 const money = n => new Intl.NumberFormat("en-GB", {
@@ -179,15 +178,6 @@ paypalBtn.addEventListener("click", () => {
   window.open(PAYPAL_LINK, "_blank", "noopener,noreferrer");
 });
 
-gcBtn.addEventListener("click", () => {
-  const amount = getAmount();
-  if (amount === null) return;
-  if (!activeFund.gocardless) {
-    alert("GoCardless is not connected to this fund yet.");
-    return;
-  }
-  window.open(activeFund.gocardless, "_blank", "noopener,noreferrer");
-});
 
 document.getElementById("copyBank").addEventListener("click", async () => {
   const amount = Number(amountInput.value) || 0;

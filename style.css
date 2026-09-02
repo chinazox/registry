@@ -198,3 +198,6 @@ dt { color:var(--muted); } dd { margin:0; font-weight:600; text-align:right; }
   .modal { padding:28px 22px; }
   .modal h2 { font-size:34px; }
 }
+#gcBtn {
+  display: none;
+}
