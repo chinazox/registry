@@ -193,7 +193,10 @@ cardBtn.addEventListener("click", () => {
   if (amount === null) return;
 
   document.getElementById("cardAmount").textContent = money(amount);
-  cardPayment.classList.toggle("open");
+ cardPayment.classList.toggle("open");
+ cardBtn.classList.toggle("open");
+ cardBtn.style.setProperty("background", "#24221f", "important");
+ cardBtn.style.setProperty("color", "white", "important");
 });
 paypal.HostedButtons({
   hostedButtonId: "J99ZJFK67ZYRQ",

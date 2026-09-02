@@ -218,16 +218,6 @@ dt { color:var(--muted); } dd { margin:0; font-weight:600; text-align:right; }
   margin: 0 auto;
   white-space: nowrap;
 }
-@media (max-width: 850px) {
-  .registry-grid { grid-template-columns:repeat(2, minmax(0,1fr)); }
-}
-@media (max-width: 560px) {
-  .hero { padding-top:58px; }
-  h1 { font-size:49px; }
-  .registry-grid { grid-template-columns:1fr; }
-  .card-image { aspect-ratio:1.35/1; }
-  .modal { padding:28px 22px; }
-  .modal h2 { font-size:34px; }
 
 .thank-you-page {
   max-width: 900px;
@@ -269,4 +259,16 @@ dt { color:var(--muted); } dd { margin:0; font-weight:600; text-align:right; }
   width: 350px;
   max-width: 90%;
   height: auto;
+}
+
+@media (max-width: 850px) {
+  .registry-grid { grid-template-columns:repeat(2, minmax(0,1fr)); }
+}
+@media (max-width: 560px) {
+  .hero { padding-top:58px; }
+  h1 { font-size:49px; }
+  .registry-grid { grid-template-columns:1fr; }
+  .card-image { aspect-ratio:1.35/1; }
+  .modal { padding:28px 22px; }
+  .modal h2 { font-size:34px; }
 }
