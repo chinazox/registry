@@ -31,7 +31,7 @@ const FUNDS = [
   },
   {
     "name": "Wedding Cake",
-    "goal": 500,
+    "goal": 450,
     "contributed": 0,
     "image": "images/cake.jpeg",
     "paypal": "",
@@ -53,19 +53,19 @@ const FUNDS = [
     "paypal": "",
     "gocardless": ""
   },
-  {
-    "name": "Bridal Robe",
+   {
+    "name": "Content Creator",
     "goal": 250,
     "contributed": 0,
-    "image": "images/robe.jpg",
+    "image": "images/content.jpeg",
     "paypal": "",
     "gocardless": ""
   },
   {
-    "name": "Wedding Day Makeup",
+    "name": "Wedding DJ",
     "goal": 500,
     "contributed": 0,
-    "image": "images/makeup.JPG",
+    "image": "images/dj.jpeg",
     "paypal": "",
     "gocardless": ""
   },
@@ -194,13 +194,19 @@ cardBtn.addEventListener("click", () => {
 
   document.getElementById("cardAmount").textContent = money(amount);
  cardPayment.classList.toggle("open");
- cardBtn.classList.toggle("open");
- cardBtn.style.setProperty("background", "#24221f", "important");
- cardBtn.style.setProperty("color", "white", "important");
+cardBtn.classList.toggle("open");
+
+if (cardBtn.classList.contains("open")) {
+  cardBtn.style.setProperty("background", "#24221f", "important");
+  cardBtn.style.setProperty("color", "white", "important");
+} else {
+  cardBtn.style.removeProperty("background");
+  cardBtn.style.removeProperty("color");
+}
 });
 paypal.HostedButtons({
-  hostedButtonId: "J99ZJFK67ZYRQ",
-}).render("#paypal-container-J99ZJFK67ZYRQ");
+    hostedButtonId: "J99ZJFK67ZYRQ",
+  }).render("#paypal-container-J99ZJFK67ZYRQ")
 
 document.getElementById("copyBank").addEventListener("click", async () => {
   const amount = Number(amountInput.value) || 0;
