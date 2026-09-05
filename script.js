@@ -1,81 +1,68 @@
 const BANK_DETAILS = {
   name: "CHINAZO ONWUTA",
-  sort: "01-09-27",
-  account: "84465564"
+  sort: "04-00-75",
+  account: "20810458"
 };
-const PAYPAL_LINK = "https://paypal.me/chinazox";
+const NIG_BANK_DETAILS = {
+  name: "CHIEBUKA ITANYI",
+  bank: "Zenith Bank",
+  account: "2174967910"
+};
+
 const FUNDS = [
   {
     "name": "Our Honeymoon Fund",
     "goal": 6000,
-    "contributed": 0,
     "image": "images/honeymoon.jpeg",
-    "paypal": "",
-    "gocardless": ""
+    "code": "HF"
   },
   {
     "name": "Furniture For Our New Home",
     "goal": 8000,
-    "contributed": 0,
     "image": "images/furniture.jpg",
-    "paypal": "",
-    "gocardless": ""
+    "code": "FN"
   },
   {
     "name": "Wedding Night Suite",
     "goal": 350,
-    "contributed": 0,
     "image": "images/suite.JPG",
-    "paypal": "",
-    "gocardless": ""
+    "code": "WS"
   },
   {
     "name": "Wedding Cake",
     "goal": 450,
-    "contributed": 0,
     "image": "images/cake.jpeg",
-    "paypal": "",
-    "gocardless": ""
+    "code": "WC"
   },
   {
     "name": "Our First Date Night",
     "goal": 100,
-    "contributed": 0,
      "image": "images/datenight.jpeg",
-    "paypal": "",
-    "gocardless": ""
+    "code": "DN"
   },
   {
     "name": "Uber to the Airport",
     "goal": 50,
-    "contributed": 0,
     "image": "images/uber.jpeg",
-    "paypal": "",
-    "gocardless": ""
+    "code": "UA"
   },
    {
     "name": "Content Creator",
     "goal": 250,
-    "contributed": 0,
     "image": "images/content.jpeg",
-    "paypal": "",
-    "gocardless": ""
+    "code": "CC"
   },
   {
     "name": "Wedding DJ",
     "goal": 500,
-    "contributed": 0,
     "image": "images/dj.jpeg",
-    "paypal": "",
-    "gocardless": ""
+    "code": "DJ"
   },
   {
     "name": "House Down Payment",
     "goal": 10000,
-    "contributed": 0,
     "image": "images/home.jpeg",
-    "paypal": "",
-    "gocardless": ""
+    "code": "HP"
   }
 ];
 
@@ -128,8 +115,8 @@ function openFund(index) {
   document.querySelector('[data-bank="name"]').textContent = BANK_DETAILS.name;
   document.querySelector('[data-bank="sort"]').textContent = BANK_DETAILS.sort;
   document.querySelector('[data-bank="account"]').textContent = BANK_DETAILS.account;
-  document.getElementById("bankReference").textContent =
-    activeFund.name.replace(/[^A-Za-z0-9]/g,"").slice(0,18).toUpperCase();
+  document.getElementById("bankReference").textContent = "YOUR NAME + " + activeFund.code;
+  document.getElementById("nigeriaBankReference").textContent = "YOUR NAME + " + activeFund.code;
 }
 
 function close() {
@@ -164,6 +151,7 @@ function updateBankAmount() {
   document.getElementById("bankAmount").textContent = money(amount);
   document.getElementById("paymentAmount").textContent = money(amount);
   document.getElementById("cardAmount").textContent = money(amount);
+  document.getElementById("nigeriaBankAmount").textContent = money(amount);
 }
 amountInput.addEventListener("input", updateBankAmount);
 amountInput.addEventListener("input", () => {
@@ -210,7 +198,7 @@ paypal.HostedButtons({
 
 document.getElementById("copyBank").addEventListener("click", async () => {
   const amount = Number(amountInput.value) || 0;
-  const reference = activeFund.name.replace(/[^A-Za-z0-9]/g,"").slice(0,18).toUpperCase();
+  const reference = "YOUR NAME + " + activeFund.code;
   const text = `Account name: ${BANK_DETAILS.name}
 Sort code: ${BANK_DETAILS.sort}
 Account number: ${BANK_DETAILS.account}
@@ -223,6 +211,44 @@ Amount: ${money(amount)}`;
   } catch {
     alert(text);
   }
+});
+
+document.getElementById("copyNigeriaBank").addEventListener("click", async () => {
+  const amount = Number(amountInput.value) || 0;
+  const reference = "YOUR NAME + " + activeFund.code;
+  const text = `Account name: ${NIG_BANK_DETAILS.name}
+Bank: ${NIG_BANK_DETAILS.bank}
+Account number: ${NIG_BANK_DETAILS.account}
+Reference: ${reference}
+Amount: ${money(amount)}`;
+
+  try {
+    await navigator.clipboard.writeText(text);
+    document.getElementById("copyNigeriaBank").textContent = "Copied ✓";
+    setTimeout(() => document.getElementById("copyNigeriaBank").textContent = "Copy bank details", 1800);
+  } catch {
+    alert(text);
+  }
+});
+
+document.getElementById("ukBankBtn").addEventListener("click", () => {
+  document.getElementById("bankDetails").querySelector("dl").style.display = "block";
+  document.getElementById("nigeriaBankDetails").style.display = "none";
+
+  document.getElementById("ukBankBtn").style.background = "#24221f";
+  document.getElementById("ukBankBtn").style.color = "white";
+  document.getElementById("nigeriaBankBtn").style.background = "transparent";
+  document.getElementById("nigeriaBankBtn").style.color = "#24221f";
+});
+
+document.getElementById("nigeriaBankBtn").addEventListener("click", () => {
+  document.getElementById("bankDetails").querySelector("dl").style.display = "none";
+  document.getElementById("nigeriaBankDetails").style.display = "block";
+
+  document.getElementById("nigeriaBankBtn").style.background = "#24221f";
+  document.getElementById("nigeriaBankBtn").style.color = "white";
+  document.getElementById("ukBankBtn").style.background = "transparent";
+  document.getElementById("ukBankBtn").style.color = "#24221f";
 });
 
 render();

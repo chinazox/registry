@@ -208,6 +208,43 @@ dt { color:var(--muted); } dd { margin:0; font-weight:600; text-align:right; }
   display: block;
 }
 
+.bank-details {
+  position: relative;
+}
+
+.bank-switch button {
+  padding: 6px 14px;
+  width: 58px;
+  border: 1px solid #cfc7bd;
+  background: transparent;
+  color: #24221f;
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.bank-switch button:first-child {
+  border-radius: 16px 0 0 16px;
+}
+
+.bank-switch button:last-child {
+  border-radius: 0 16px 16px 0;
+}
+
+.bank-switch {
+  position: absolute;
+  top: 65px;
+  right: 10px;
+}
+
+.bank-switch button.active {
+  background: #24221f;
+  color: white;
+}
+
 .registry-photo img {
   width: 100%;
   display: block;

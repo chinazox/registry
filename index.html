@@ -71,15 +71,35 @@ Please feel free to contribute whatever feels right for you. We are  incredibly 
         </button>
 
         <div class="bank-details" id="bankDetails">
-        <h3>Bank Transfer Details</h3>
-        <dl>
-          <div><dt>Account name</dt><dd data-bank="name">CHINAZO ONWUTA</dd></div>
-          <div><dt>Sort code</dt><dd data-bank="sort">09-01-27</dd></div>
-          <div><dt>Account number</dt><dd data-bank="account">84465564</dd></div>
+        <h3>Bank Transfer Details</h3><br>
+       
+        <div class="bank-switch">
+          <button type="button" id="ukBankBtn" class="active" style="display:inline-block;" onclick="document.getElementById('bankDetails').querySelector('dl').style.display='block'; document.getElementById('nigeriaBankDetails').style.display='none';">UK</button>
+          <button type="button" id="nigeriaBankBtn" onclick="document.getElementById('bankDetails').querySelector('dl').style.display='none'; document.getElementById('nigeriaBankDetails').style.display='block';">Nigeria</button>
+        </div>
+        
+        <dl><small>UK Bank Transfers</small>
+          <div><dt>Account Name</dt><dd data-bank="name">CHINAZO ONWUTA</dd></div>
+          <div><dt>Bank Name</dt><dd>Revolut</dd></div>
+          <div><dt>Sort Code</dt><dd data-bank="sort">04-00-75</dd></div>
+          <div><dt>Account Number</dt><dd data-bank="account">20810458</dd></div>
           <div><dt>Reference</dt><dd id="bankReference">GIFT</dd></div>
           <div><dt>Amount</dt><dd id="bankAmount">£100</dd></div>
-        </dl>
         <button class="copy-btn" id="copyBank">Copy bank details</button>
+        </dl>
+        
+      <div id="nigeriaBankDetails" style="display:none;">
+      <dl><small>Nigerian Bank Transfers</small>
+        <div><dt>Account Name</dt><dd>CHIEBUKA ITANYI</dd></div>
+        <div><dt>Bank Name</dt><dd>Zenith</dd></div>
+        <div><dt>Account Type</dt><dd>Savings</dd></div>
+        <div><dt>Account Number</dt><dd>2174967910</dd></div>
+        <div><dt>Reference</dt><dd id="nigeriaBankReference">YOUR NAME + [CODE]</dd></div>
+        <div><dt>Amount</dt><dd id="nigeriaBankAmount">£100</dd></div>
+        <button class="copy-btn" id="copyNigeriaBank">Copy bank details</button>
+      </dl>
+    </div>
+
       </div>
 
       <button class= "payment link" id="paylinkBtn">
