@@ -176,25 +176,6 @@ paylinkBtn.addEventListener("click", () => {
 const cardBtn = document.getElementById("cardBtn");
 const cardPayment = document.getElementById("cardPayment");
 
-cardBtn.addEventListener("click", () => {
-  const amount = getAmount();
-  if (amount === null) return;
-
-  document.getElementById("cardAmount").textContent = money(amount);
- cardPayment.classList.toggle("open");
-cardBtn.classList.toggle("open");
-
-if (cardBtn.classList.contains("open")) {
-  cardBtn.style.setProperty("background", "#24221f", "important");
-  cardBtn.style.setProperty("color", "white", "important");
-} else {
-  cardBtn.style.removeProperty("background");
-  cardBtn.style.removeProperty("color");
-}
-});
-paypal.HostedButtons({
-    hostedButtonId: "J99ZJFK67ZYRQ",
-  }).render("#paypal-container-J99ZJFK67ZYRQ")
 
 document.getElementById("copyBank").addEventListener("click", async () => {
   const amount = Number(amountInput.value) || 0;
