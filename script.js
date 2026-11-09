@@ -17,28 +17,16 @@ const FUNDS = [
     "code": "HF"
   },
   {
-    "name": "Furniture For Our New Home",
-    "goal": 8000,
-    "image": "images/furniture.jpg",
-    "code": "FN"
-  },
-  {
     "name": "Wedding Night Suite",
     "goal": 350,
     "image": "images/suite.JPG",
     "code": "WS"
   },
   {
-    "name": "Wedding Cake",
-    "goal": 450,
-    "image": "images/cake.jpeg",
-    "code": "WC"
-  },
-  {
-    "name": "Our First Date Night",
-    "goal": 100,
-     "image": "images/datenight.jpeg",
-    "code": "DN"
+    "name": "Furnishing Our New Home",
+    "goal": 8000,
+    "image": "images/furniture.jpg",
+    "code": "NF"
   },
   {
     "name": "Uber to the Airport",
@@ -46,23 +34,17 @@ const FUNDS = [
     "image": "images/uber.jpeg",
     "code": "UA"
   },
+  {
+    "name": "Our First Date Night",
+    "goal": 100,
+     "image": "images/datenight.jpeg",
+    "code": "DN"
+  },
    {
-    "name": "Content Creator",
-    "goal": 250,
-    "image": "images/content.jpeg",
-    "code": "CC"
-  },
-  {
-    "name": "Wedding DJ",
-    "goal": 500,
-    "image": "images/dj.jpeg",
-    "code": "DJ"
-  },
-  {
-    "name": "House Down Payment",
-    "goal": 10000,
-    "image": "images/home.jpeg",
-    "code": "HP"
+    "name": "Kitchen Essentials",
+    "goal": 450,
+    "image": "images/kitchen.jpg",
+    "code": "KE"
   }
 ];
 
