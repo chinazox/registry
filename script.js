@@ -11,40 +11,76 @@ const NIG_BANK_DETAILS = {
 
 const FUNDS = [
   {
-    "name": "Our Honeymoon Fund",
+    "name": "Honeymoon Fund",
     "goal": 6000,
     "image": "images/honeymoon.jpeg",
     "code": "HF"
   },
   {
-    "name": "Wedding Night Suite",
-    "goal": 350,
-    "image": "images/suite.JPG",
-    "code": "WS"
+    "name": "Fridge",
+    "goal": 800,
+    "image": "images/fridge.jpeg",
+    "code": "FD"
   },
   {
-    "name": "Furnishing Our New Home",
-    "goal": 8000,
-    "image": "images/furniture.jpg",
-    "code": "NF"
+    "name": "Deep Freezer",
+    "goal": 250,
+    "image": "images/freezer.jpg",
+    "code": "CC"
   },
   {
-    "name": "Uber to the Airport",
-    "goal": 50,
-    "image": "images/uber.jpeg",
-    "code": "UA"
+    "name": "Cooker",
+    "goal": 400,
+    "image": "images/cooker.jpeg",
+    "code": "CC"
+  },
+  {
+    "name": "Washing Machine",
+    "goal": 500,
+    "image": "images/washing.jpg",
+    "code": "WM"
+  },
+  {
+    "name": "AC Units",
+    "goal": 1000,
+    "image": "images/AC.jpeg",
+    "code": "AC"
+  },
+  {
+    "name": "Televisions",
+    "goal": 1500,
+    "image": "images/tv.jpeg",
+    "code": "TV"
+  },
+  {
+    "name": "Sofa",
+    "goal": 1000,
+    "image": "images/sofa.jpeg",
+    "code": "SF"
+  },
+  {
+    "name": "New Bed",
+    "goal": 950,
+    "image": "images/bed.jpeg",
+    "code": "BD"
   },
   {
     "name": "Our First Date Night",
     "goal": 100,
-     "image": "images/datenight.jpeg",
+    "image": "images/datenight.jpeg",
     "code": "DN"
   },
+  {
+    "name": "New Mattress",
+    "goal": 650,
+    "image": "images/matress.jpeg",
+    "code": "NM"
+  },
    {
-    "name": "Kitchen Essentials",
-    "goal": 450,
-    "image": "images/kitchen.jpg",
-    "code": "KE"
+    "name": "Wedding Night Suite",
+    "goal": 350,
+    "image": "images/suite.JPG",
+    "code": "WS"
   }
 ];
 
