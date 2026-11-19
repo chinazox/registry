@@ -20,13 +20,13 @@ const FUNDS = [
     "name": "Fridge",
     "goal": 800,
     "image": "images/fridge.jpeg",
-    "code": "FD"
+    "code": "FF"
   },
   {
     "name": "Deep Freezer",
     "goal": 250,
     "image": "images/freezer.jpg",
-    "code": "CC"
+    "code": "DF"
   },
   {
     "name": "Cooker",
